@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Legion 5 Pro
+ * @author Legion 5 Pro Vo Le Tan Thanh test compare and Pull
  */
 public class FormNhan extends javax.swing.JFrame {
 
