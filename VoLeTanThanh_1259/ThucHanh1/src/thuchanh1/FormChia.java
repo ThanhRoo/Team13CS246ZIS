@@ -186,7 +186,11 @@ public class FormChia extends javax.swing.JFrame {
         try {
             double so1 = Double.parseDouble(jTextField_soThuNhat.getText());
             double so2 = Double.parseDouble(jTextField_soThuHai.getText());
+            if(so2 != 0){
         jLabel_HienThiKetQua.setText(" "+so1 + "  / "+" " +so2 + " " + " = " + " " +(so1 / so2));
+            }else{
+                jLabel_HienThiKetQua.setText(" "+so1 + "  / "+" " +so2 + " " + " = " + " 0");
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, "Sai kiểu dữ liệu !!!");
         }
