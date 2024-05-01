@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model;
-import java.sql.*;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author Legion 5 Pro
@@ -13,24 +17,30 @@ public class ChuyenBay {
     private String diemDi;
     private String diemDen;
     private Date thoiGianDi;
+    private String gioCatCanh;
     private Date thoiGianDen;
+    private String gioHaCanh;
     private int gia;
     private MayBay mayBay;
     private SanBay sanBay;
+    private SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+    
     public ChuyenBay(){
     }
     public ChuyenBay(String maChuyenBay){
         this.maChuyenBay = maChuyenBay;
     }
-    public ChuyenBay(String maChuyenBay, String diemDi, String diemDen, Date thoiGianDi, Date thoiGianDen, int gia, MayBay mayBay, SanBay sanBay) {
+    public ChuyenBay(String maChuyenBay, String diemDi, String diemDen, Date thoiGianDi,String gioCatCanh, Date thoiGianDen,String gioHaCanh, int gia, MayBay mayBay, SanBay sanBay) throws ParseException {
         this.maChuyenBay = maChuyenBay;
         this.diemDi = diemDi;
         this.diemDen = diemDen;
-        this.thoiGianDi = thoiGianDi;
-        this.thoiGianDen = thoiGianDen;
+        this.thoiGianDi =thoiGianDi  ;
+        this.thoiGianDen = thoiGianDen ;
         this.gia = gia;
         this.mayBay = mayBay;
         this.sanBay = sanBay;
+        this.gioCatCanh = gioCatCanh;
+        this.gioHaCanh = gioHaCanh;
     }
 
     public String getMaChuyenBay() {
@@ -69,6 +79,30 @@ public class ChuyenBay {
         return thoiGianDen;
     }
 
+    public String getGioCatCanh() {
+        return gioCatCanh;
+    }
+
+    public void setGioCatCanh(String gioCatCanh) {
+        this.gioCatCanh = gioCatCanh;
+    }
+
+    public String getGioHaCanh() {
+        return gioHaCanh;
+    }
+
+    public void setGioHaCanh(String gioHaCanh) {
+        this.gioHaCanh = gioHaCanh;
+    }
+
+    public SimpleDateFormat getDf() {
+        return df;
+    }
+
+    public void setDf(SimpleDateFormat df) {
+        this.df = df;
+    }
+    
     public void setThoiGianDen(Date thoiGianDen) {
         this.thoiGianDen = thoiGianDen;
     }
@@ -95,6 +129,11 @@ public class ChuyenBay {
 
     public void setSanBay(SanBay sanBay) {
         this.sanBay = sanBay;
+    }
+
+    @Override
+    public String toString() {
+        return "ChuyenBay{" + "maChuyenBay=" + maChuyenBay + ", diemDi=" + diemDi + ", diemDen=" + diemDen + ", thoiGianDi=" + thoiGianDi + ", gioCatCanh=" + gioCatCanh + ", thoiGianDen=" + thoiGianDen + ", gioHaCanh=" + gioHaCanh + ", gia=" + gia + ", mayBay=" + mayBay + ", sanBay=" + sanBay + ", df=" + df + '}';
     }
     
     

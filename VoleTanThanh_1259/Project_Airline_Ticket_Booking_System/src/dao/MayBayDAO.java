@@ -30,13 +30,13 @@ public class MayBayDAO implements DAOInterface<MayBay> {
 
             String sql = "INSERT INTO table_maybay (maMayBay, loaiMayBay, soGhe, maHangBay) VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = c.prepareStatement(sql);
-            // Thiết lập các tham số cho câu lệnh SQL
+     
             preparedStatement.setString(1, t.getMaMayBay());
             preparedStatement.setString(2, t.getLoaiMayBay());
             preparedStatement.setInt(3, t.getSoGhe());
             preparedStatement.setString(4, t.getHangMayBay().getMaHangBay());
 
-            // Thực thi câu lệnh SQL và nhận số hàng bị ảnh hưởng
+           
             kq = preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,7 +112,7 @@ public class MayBayDAO implements DAOInterface<MayBay> {
                 kq.add(mayBay);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            
         }
         return kq;
     }
@@ -120,6 +120,33 @@ public class MayBayDAO implements DAOInterface<MayBay> {
     @Override
     public MayBay selectById(MayBay t) {
         MayBay kq = null;
+        try {
+            Connection c = JDBCUtil.getConnection();
+            
+            String sql = " SELECT table_maybay.maMayBay, table_maybay.loaiMayBay, table_maybay.soGhe, table_maybay.maHangBay, table_hang.tenHangBay "
+                    + "FROM table_maybay "
+                    + "JOIN table_hang ON table_maybay.maHangBay = table_hang.maHangBay "
+                    + "WHERE table_maybay.maMayBay=? ";
+
+            
+            PreparedStatement preparedStatement = c.prepareStatement(sql);
+            preparedStatement.setString(1,t.getMaMayBay());
+            ResultSet rs = preparedStatement.executeQuery();
+            
+            while(rs.next()){
+              String maMayBay = rs.getString("maMayBay");
+              String loaiMayBay = rs.getString("loaiMayBay");
+              int soGhe = rs.getInt("soGhe");
+              String maHangBay = rs.getString("maHangBay");
+              String tenHangBay = rs.getString("tenHangBay");
+              
+              Hang hang = new Hang(maHangBay, tenHangBay);
+              kq = new MayBay(maMayBay, loaiMayBay, soGhe, hang);  
+            }
+            JDBCUtil.closeConnection(c);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
 
         return kq;
     }

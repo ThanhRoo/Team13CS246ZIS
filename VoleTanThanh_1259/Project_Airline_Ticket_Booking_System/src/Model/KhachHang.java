@@ -4,7 +4,10 @@
  */
 package Model;
 
-import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 /**
  *
@@ -18,11 +21,11 @@ public class KhachHang {
     private Date ngaySinh;
     private String cccd;
     private String quocTich;
-    
+    private SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     public KhachHang() {
     }
 
-    public KhachHang(String ho, String ten, String sdt, Date ngaySinh, String cccd, String quocTich) {
+    public KhachHang(String ho, String ten, String sdt, Date ngaySinh, String cccd, String quocTich) throws ParseException {
         this.ho = ho;
         this.ten = ten;
         this.sdt = sdt;
