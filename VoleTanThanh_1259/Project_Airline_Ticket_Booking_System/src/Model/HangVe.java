@@ -11,19 +11,17 @@ package Model;
 public class HangVe {
     private String  maHangVe;
     private String tenHangVe;
-    private Hang hang;
 
     public HangVe() {
     }
-    public HangVe(String maHangVe) {
+     public HangVe(String maHangVe) {
         this.maHangVe = maHangVe;
     }
-    public HangVe(String maHangVe, String tenHangVe, Hang hang) {
+    public HangVe(String maHangVe, String tenHangVe) {
         this.maHangVe = maHangVe;
         this.tenHangVe = tenHangVe;
-        this.hang = hang;
     }
-
+   
     public String getMaHangVe() {
         return maHangVe;
     }
@@ -40,13 +38,5 @@ public class HangVe {
         this.tenHangVe = tenHangVe;
     }
 
-    public Hang getHang() {
-        return hang;
-    }
-
-    public void setHang(Hang hang) {
-        this.hang = hang;
-    }
-    
     
 }

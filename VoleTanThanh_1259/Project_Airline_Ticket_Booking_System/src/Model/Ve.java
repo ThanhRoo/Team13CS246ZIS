@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Ve {
     private int maVe;
-    private int soGhe;
+    private int soGheChon;
     private Date ngayDat;
     private int tongTien;
     private ChuyenBay chuyenBay;
@@ -25,16 +25,24 @@ public class Ve {
     public Ve(int maVe) {
         this.maVe = maVe;
     }
-    public Ve(int maVe, int soGhe, Date ngayDat, int tongTien, ChuyenBay chuyenBay, KhachHang khachHang, HangVe hangVe) {
+    public Ve(int maVe,int soGheChon, Date ngayDat, int tongTien, ChuyenBay chuyenBay, KhachHang khachHang, HangVe hangVe) {
         this.maVe = maVe;
-        this.soGhe = soGhe;
+        this.soGheChon = soGheChon;
         this.ngayDat = ngayDat;
         this.tongTien = tongTien;
         this.chuyenBay = chuyenBay;
         this.khachHang = khachHang;
         this.hangVe = hangVe;
     }
-
+     public Ve(int soGheChon, Date ngayDat, int tongTien, ChuyenBay chuyenBay, KhachHang khachHang, HangVe hangVe) {
+        this.soGheChon = soGheChon;
+        this.ngayDat = ngayDat;
+        this.tongTien = tongTien;
+        this.chuyenBay = chuyenBay;
+        this.khachHang = khachHang;
+        this.hangVe = hangVe;
+    }
+     
     public int getMaVe() {
         return maVe;
     }
@@ -43,14 +51,15 @@ public class Ve {
         this.maVe = maVe;
     }
 
-    public int getSoGhe() {
-        return soGhe;
+    public int getSoGheChon() {
+        return soGheChon;
     }
 
-    public void setSoGhe(int soGhe) {
-        this.soGhe = soGhe;
+    public void setSoGheChon(int soGheChon) {
+        this.soGheChon = soGheChon;
     }
 
+   
     public Date getNgayDat() {
         return ngayDat;
     }
@@ -90,6 +99,13 @@ public class Ve {
     public void setHangVe(HangVe hangVe) {
         this.hangVe = hangVe;
     }
+
+    @Override
+    public String toString() {
+        return "Ve{" + "maVe=" + maVe + ", soGheChon=" + soGheChon + ", ngayDat=" + ngayDat + ", tongTien=" + tongTien + ", chuyenBay=" + chuyenBay + ", khachHang=" + khachHang + ", hangVe=" + hangVe + '}';
+    }
+
+   
 
     
  

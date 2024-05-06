@@ -21,6 +21,7 @@ public class ChuyenBay {
     private Date thoiGianDen;
     private String gioHaCanh;
     private int gia;
+    private int soChoConTrong;
     private MayBay mayBay;
     private SanBay sanBay;
     private SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -30,7 +31,12 @@ public class ChuyenBay {
     public ChuyenBay(String maChuyenBay){
         this.maChuyenBay = maChuyenBay;
     }
-    public ChuyenBay(String maChuyenBay, String diemDi, String diemDen, Date thoiGianDi,String gioCatCanh, Date thoiGianDen,String gioHaCanh, int gia, MayBay mayBay, SanBay sanBay) throws ParseException {
+    public ChuyenBay(String diemDi , String diemDen , Date thoiGianDi){
+        this.diemDi = diemDi;
+        this.diemDen = diemDen;
+        this.thoiGianDi = thoiGianDi;
+    }
+    public ChuyenBay(String maChuyenBay, String diemDi, String diemDen, Date thoiGianDi,String gioCatCanh, Date thoiGianDen,String gioHaCanh, int gia,int soChoConTrong, MayBay mayBay, SanBay sanBay) throws ParseException {
         this.maChuyenBay = maChuyenBay;
         this.diemDi = diemDi;
         this.diemDen = diemDen;
@@ -41,6 +47,15 @@ public class ChuyenBay {
         this.sanBay = sanBay;
         this.gioCatCanh = gioCatCanh;
         this.gioHaCanh = gioHaCanh;
+        this.soChoConTrong = soChoConTrong;
+    }
+
+    public int getsoChoConTrong() {
+        return soChoConTrong;
+    }
+
+    public void setsoChoConTrong(int soChoConTrong) {
+        this.soChoConTrong = soChoConTrong;
     }
 
     public String getMaChuyenBay() {
@@ -133,8 +148,10 @@ public class ChuyenBay {
 
     @Override
     public String toString() {
-        return "ChuyenBay{" + "maChuyenBay=" + maChuyenBay + ", diemDi=" + diemDi + ", diemDen=" + diemDen + ", thoiGianDi=" + thoiGianDi + ", gioCatCanh=" + gioCatCanh + ", thoiGianDen=" + thoiGianDen + ", gioHaCanh=" + gioHaCanh + ", gia=" + gia + ", mayBay=" + mayBay + ", sanBay=" + sanBay + ", df=" + df + '}';
+        return "ChuyenBay{" + "maChuyenBay=" + maChuyenBay + ", diemDi=" + diemDi + ", diemDen=" + diemDen + ", thoiGianDi=" + thoiGianDi + ", gioCatCanh=" + gioCatCanh + ", thoiGianDen=" + thoiGianDen + ", gioHaCanh=" + gioHaCanh + ", gia=" + gia + ", soChoConTrong=" + soChoConTrong + ", mayBay=" + mayBay + ", sanBay=" + sanBay + ", df=" + df + '}';
     }
+
+    
     
     
 }

@@ -24,7 +24,9 @@ public class KhachHang {
     private SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     public KhachHang() {
     }
-
+    public KhachHang(int maKhachHang){
+        this.maKhachHang = maKhachHang;
+    }
     public KhachHang(String ho, String ten, String sdt, Date ngaySinh, String cccd, String quocTich) throws ParseException {
         this.ho = ho;
         this.ten = ten;
