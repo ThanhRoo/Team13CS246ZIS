@@ -251,6 +251,7 @@ public class ChuyenBayDAO implements DAOInterface<ChuyenBay> {
 
                 ChuyenBay chuyenBay = new ChuyenBay(maChuyenBay, diemDi, diemDen, new Date(thoiGianDi.getTime()), gioCatCanh, new Date(thoiGianDen.getTime()), gioHaCanh, gia, soChoConTrong, mayBay, sanBay);
                 kq.add(chuyenBay);
+                JDBCUtil.closeConnection(c);
             }
             
         } catch (SQLException ex) {
