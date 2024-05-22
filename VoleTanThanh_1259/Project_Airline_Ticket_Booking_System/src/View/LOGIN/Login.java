@@ -1,5 +1,6 @@
 
 package View.LOGIN;
+import View.TICKET.ticket;
 import View.HOME.TrangChu;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,6 +9,7 @@ import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
+  
 
 public class Login extends javax.swing.JFrame {
 
@@ -194,12 +196,13 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-        // System.out.println("Sign up btn clicked");
+        
         String Email, Password, query, fname = null, passDb = null;
         String SUrl, SUser, SPass;
         SUrl = "jdbc:MySQL://localhost:3307/test";
         SUser = "root";
         SPass = "";
+        
         int notFound = 0;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -225,8 +228,9 @@ public class Login extends javax.swing.JFrame {
             }
             if(notFound == 1 && Password.equals(passDb)){
                  showMessageDialog(null, "Successfully!");
-                 TrangChu t=new TrangChu();
-                 t.setVisible(true);
+                 TrangChu t=new TrangChu();                 
+                 ticket m=new ticket();
+                 m.setVisible(true);
                  this.dispose();
             }else{
                JOptionPane.showMessageDialog(new JFrame(), "Incorrect email or password", "Error",
