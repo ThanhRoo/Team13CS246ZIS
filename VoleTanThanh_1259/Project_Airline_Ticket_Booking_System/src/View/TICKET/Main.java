@@ -3,7 +3,7 @@ package View.TICKET;
 
 public class Main {
     public static void main(String[] args) {
-       Ve a = new Ve();
+       ticket a = new ticket();
        a.setVisible(true);
        a.pack();
        a.setLocationRelativeTo(null);
