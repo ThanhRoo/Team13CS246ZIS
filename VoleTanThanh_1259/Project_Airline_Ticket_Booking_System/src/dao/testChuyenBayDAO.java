@@ -32,6 +32,12 @@ public class testChuyenBayDAO {
 //        ChuyenBay findID = new ChuyenBay("vn12");
 //        ChuyenBay result = ChuyenBayDAO.getIntance().selectById(findID);
 //        System.out.println(result.toString());
+            
+            ChuyenBay cbfindDD = new ChuyenBay("PQ" , "DN" ,df.parse("12/03/2024") );
+          ArrayList<ChuyenBay> findDD = ChuyenBayDAO.getIntance().timKiemChuyenBay(cbfindDD);
+          for (ChuyenBay chuyenBay2 : findDD) {
+              System.out.println(chuyenBay2.toString());
+        }
     }
 
 }

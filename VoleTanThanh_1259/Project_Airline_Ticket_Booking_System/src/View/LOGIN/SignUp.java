@@ -236,9 +236,9 @@ public class SignUp extends javax.swing.JFrame {
         
         String fullName, email, Password, phoneNumb, query;
         String SUrl, SUser, SPass;
-        SUrl = "jdbc:MySQL://localhost:3307/quanlidatve";
+        SUrl = "jdbc:MySQL://localhost:3307/test";
         SUser = "root";
-        SPass = "gr13";
+        SPass = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
