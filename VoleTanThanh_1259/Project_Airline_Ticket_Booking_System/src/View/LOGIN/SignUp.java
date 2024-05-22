@@ -236,7 +236,7 @@ public class SignUp extends javax.swing.JFrame {
         
         String fullName, email, Password, phoneNumb, query;
         String SUrl, SUser, SPass;
-        SUrl = "jdbc:MySQL://localhost:3307/test1";
+        SUrl = "jdbc:MySQL://localhost:3307/test";
         SUser = "root";
         SPass = "";
         try {

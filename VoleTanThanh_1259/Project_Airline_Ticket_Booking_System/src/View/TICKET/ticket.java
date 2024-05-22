@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View.TICKET;
-import dao.VeDAO;
-import Model.Ve;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import Model.KhachHang;
 
 /**
  *
@@ -303,6 +302,17 @@ public class ticket extends javax.swing.JFrame{
         datakh.add(ad);
         jTable2.setModel(new DefaultTableModel (datakh , kh));
         JOptionPane.showConfirmDialog(this, "Thêm Vào Thành Công");
+        KhachHang k1=new KhachHang();
+        k1.setTen(ho+" "+ten);
+        k1.setQuocTich(quoctich);   
+         txtHo.setText("");
+        txtTen.setText("");
+        txtQue.setText("");
+        txtQuoctich.setText("");
+        txtTuoi.setText("");
+
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked

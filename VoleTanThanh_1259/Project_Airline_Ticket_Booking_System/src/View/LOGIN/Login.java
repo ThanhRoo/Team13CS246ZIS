@@ -1,5 +1,6 @@
 
 package View.LOGIN;
+import View.HOME.TrangChu;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -196,7 +197,7 @@ public class Login extends javax.swing.JFrame {
         // System.out.println("Sign up btn clicked");
         String Email, Password, query, fname = null, passDb = null;
         String SUrl, SUser, SPass;
-        SUrl = "jdbc:MySQL://localhost:3307/test1";
+        SUrl = "jdbc:MySQL://localhost:3307/test";
         SUser = "root";
         SPass = "";
         int notFound = 0;
@@ -224,6 +225,9 @@ public class Login extends javax.swing.JFrame {
             }
             if(notFound == 1 && Password.equals(passDb)){
                  showMessageDialog(null, "Successfully!");
+                 TrangChu t=new TrangChu();
+                 t.setVisible(true);
+                 this.dispose();
             }else{
                JOptionPane.showMessageDialog(new JFrame(), "Incorrect email or password", "Error",
                         JOptionPane.ERROR_MESSAGE);
