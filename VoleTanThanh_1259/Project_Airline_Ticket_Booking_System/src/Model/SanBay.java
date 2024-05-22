@@ -47,5 +47,10 @@ public class SanBay {
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
+
+    @Override
+    public String toString() {
+        return "SanBay{" + "maSanBay=" + maSanBay + ", tenSanBay=" + tenSanBay + ", diaChi=" + diaChi + '}';
+    }
     
 }

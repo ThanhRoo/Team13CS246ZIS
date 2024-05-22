@@ -58,5 +58,10 @@ public class MayBay {
         this.hangMayBay = hangMayBay;
     }
 
+    @Override
+    public String toString() {
+        return "MayBay{" + "maMayBay=" + maMayBay + ", loaiMayBay=" + loaiMayBay + ", soGhe=" + soGhe + ", hangMayBay=" + hangMayBay + '}';
+    }
+
     
 }
