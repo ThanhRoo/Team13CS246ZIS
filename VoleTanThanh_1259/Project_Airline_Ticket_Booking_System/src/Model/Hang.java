@@ -38,5 +38,10 @@ public class Hang {
     public void setTenHangBay(String tenHangBay) {
         this.tenHangBay = tenHangBay;
     }
+
+    @Override
+    public String toString() {
+        return "Hang{" + "maHangBay=" + maHangBay + ", tenHangBay=" + tenHangBay + '}';
+    }
     
 }

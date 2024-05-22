@@ -38,5 +38,10 @@ public class HangVe {
         this.tenHangVe = tenHangVe;
     }
 
+    @Override
+    public String toString() {
+        return "HangVe{" + "maHangVe=" + maHangVe + ", tenHangVe=" + tenHangVe + '}';
+    }
+    
     
 }

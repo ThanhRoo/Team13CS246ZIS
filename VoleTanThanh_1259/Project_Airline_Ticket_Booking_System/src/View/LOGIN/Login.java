@@ -199,7 +199,7 @@ public class Login extends javax.swing.JFrame {
         
         String Email, Password, query, fname = null, passDb = null;
         String SUrl, SUser, SPass;
-        SUrl = "jdbc:MySQL://localhost:3307/test";
+        SUrl = "jdbc:MySQL://localhost:3307/quanlidatve";
         SUser = "root";
         SPass = "";
         

@@ -148,7 +148,7 @@ public class ChuyenBay {
 
     @Override
     public String toString() {
-        return "ChuyenBay{" + "maChuyenBay=" + maChuyenBay + ", diemDi=" + diemDi + ", diemDen=" + diemDen + ", thoiGianDi=" + thoiGianDi + ", gioCatCanh=" + gioCatCanh + ", thoiGianDen=" + thoiGianDen + ", gioHaCanh=" + gioHaCanh + ", gia=" + gia + ", soChoConTrong=" + soChoConTrong + ", mayBay=" + mayBay + ", sanBay=" + sanBay + ", df=" + df + '}';
+        return "ChuyenBay{" + "maChuyenBay=" + maChuyenBay + ", diemDi=" + diemDi + ", diemDen=" + diemDen + ", thoiGianDi=" + thoiGianDi + ", gioCatCanh=" + gioCatCanh + ", thoiGianDen=" + thoiGianDen + ", gioHaCanh=" + gioHaCanh + ", gia=" + gia + ", soChoConTrong=" + soChoConTrong  + '}';
     }
 
     
